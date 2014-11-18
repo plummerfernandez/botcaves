@@ -33,6 +33,6 @@ Installation Notes
 *the bot is running!*
 
 17. To keep the bot running when you close SSH you may want to start it differently. The options are:
-18. install 'screen' (```sudo apt-get install screen```) then is SSH start the screen mode (screen) then run the bot
+18. install 'screen' (```sudo apt-get install screen```) then in SSH start the screen mode (```screen```) then run the bot
 19. Run with an ampersand (&) to keep script running 'headless' (```python twitterbot-example.py &```) *method not tested
 20. Set up either a cron timer or init launch deamon *method not tested

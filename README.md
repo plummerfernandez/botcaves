@@ -36,3 +36,8 @@ Installation Notes
 18. install 'screen' (```sudo apt-get install screen```) then in SSH start the screen mode (```screen```) then run the bot
 19. Run with an ampersand (&) to keep script running 'headless' (```python twitterbot-example.py &```) *method not tested
 20. Set up either a cron timer or init launch deamon *method not tested
+
+*stop the bot!*
+
+21. An aggressive way is to SSH in and type ```killall python```
+22.  alternatively ```ps -A | grep python```, and you get the process id of this process. Then ```sudo kill <processid>``` 

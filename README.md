@@ -13,26 +13,26 @@ Installation Notes
 *you're in!*
 
 6. Install some software on the pi. The following are terminal commands for upgrading python, installing pip and then tywthon
-7. sudo apt-get install python dev
-8. sudo apt-get install python-pip
-9. sudo pip install twython
+7. ```sudo apt-get install python dev```
+8. ```sudo apt-get install python-pip```
+9. ```sudo pip install twython```
 
 *you have python and libraries!*
 
 10. Set up a new profile on twitter. Open an account, go to dev.twitter.com to create an app and get API keys. 
 11. Download the twitterbot-example.py script and change it to have your new API keys.
 12. Open a new terminal window. We will use this to copy/paste over the twitterbot-example.py file
-13. scp /Users/myname/Desktop/botexample.py pi@XX.XXX.XXX.XXX/usr/local/bin
+13. ```scp /Users/myname/Desktop/botexample.py pi@XX.XXX.XXX.XXX/usr/local/bin```
 
 *your bot script in on the Pi!*
 
 14. The script will be in the Pis HOME directory. You may want to move it somewhere else such as /usr/local/bin/
 15. In your SSH terminal session go to  HOME directory. Run the script with this line of code:
-16. python twitterbot-example.py
+16. ```python twitterbot-example.py```
 
 *the bot is running!*
 
 17. To keep the bot running when you close SSH you may want to start it differently. The options are:
-18. install 'screen' (sudo apt-get install screen) then is SSH start the screen mode (screen) then run the bot
-19. Run with an ampersand (&) to keep script running 'headless' (python twitterbot-example.py &) *method not tested
+18. install 'screen' (```sudo apt-get install screen```) then is SSH start the screen mode (screen) then run the bot
+19. Run with an ampersand (&) to keep script running 'headless' (```python twitterbot-example.py &```) *method not tested
 20. Set up either a cron timer or init launch deamon *method not tested

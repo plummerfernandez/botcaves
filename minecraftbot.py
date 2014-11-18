@@ -11,3 +11,8 @@ from mcpi import minecraft
 ## now we can initiate our python - minecraft session
 mc = minecraft.Minecraft.create()
 mc.postToChat("Hello world")
+
+
+## for more try these links:
+# http://www.raspberrypi.org/documentation/usage/minecraft/
+# http://www.stuffaboutcode.com/p/minecraft.html

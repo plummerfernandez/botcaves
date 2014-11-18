@@ -22,7 +22,7 @@ Installation Notes
 10. Set up a new profile on twitter. Open an account, go to dev.twitter.com to create an app and get API keys. 
 11. Download the twitterbot-example.py script and change it to have your new API keys.
 12. Open a new terminal window. We will use this to copy/paste over the twitterbot-example.py file
-13. ```scp /Users/myname/Desktop/botexample.py pi@XX.XXX.XXX.XXX/usr/local/bin```
+13. ```scp /Users/myname/Desktop/botexample.py pi@XX.XXX.XXX.XXX:~/```
 
 *your bot script in on the Pi!*
 

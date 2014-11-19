@@ -2,6 +2,10 @@ Access the Raspberry Pi config tool:
 
 ```sudo raspi-config```
 
+Find your IP address
+
+```sudo ifconfig```
+
 Start the desktop enviroment (LXDE) - will not work via SSH
 
 ```startx ```
@@ -26,4 +30,3 @@ Run any command with super user privileges:
 
 ```sudo [command]```
 
-Enjoy!

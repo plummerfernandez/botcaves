@@ -14,9 +14,9 @@ Shutdown your Pi in 1 minute:
 
 ```sudo shutdown -h 1```
 
-Reboot your pi in 1 minute:
+Reboot your pi:
 
-```sudo shutdown -r 1```
+```sudo reboot```
 
 Get manual for any command:
 

@@ -52,15 +52,16 @@ def retweetbot():
 		except TwythonError as e:
 			print e
 
+
 ## METHOD TO RUN AT INTERVALS (NODE STYLE)
 def call_repeatedly(interval, func, *args): ## you can pass arguments too which is useful
 	global stopped
-    stopped = Event()
-    def loop():
-        while not stopped.wait(interval): # the first call is in `interval` secs
-            func(*args)
-    Thread(target=loop).start()    
-    return stopped.set
+	stopped = Event()
+	def loop():
+		while not stopped.wait(interval): # the first call is in `interval` secs
+			func(*args)
+	Thread(target=loop).start()
+	return stopped.set  
 
 stopped = None
 ## just checking....
@@ -74,6 +75,7 @@ check_followers_timer = call_repeatedly(60, favbot) #seconds
 while True:
 	try:
 		#whatever
+		whatever = 1
 	except KeyboardInterrupt:
 		stopped.set()
 		raise

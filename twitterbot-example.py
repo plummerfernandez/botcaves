@@ -54,6 +54,7 @@ def retweetbot():
 
 ## METHOD TO RUN AT INTERVALS (NODE STYLE)
 def call_repeatedly(interval, func, *args): ## you can pass arguments too which is useful
+	global stopped
     stopped = Event()
     def loop():
         while not stopped.wait(interval): # the first call is in `interval` secs
@@ -61,7 +62,7 @@ def call_repeatedly(interval, func, *args): ## you can pass arguments too which 
     Thread(target=loop).start()    
     return stopped.set
 
-
+stopped = None
 ## just checking....
 print " HELLO I AM WORKING"
 ## Run the porcess once immediately when we launch
@@ -70,3 +71,9 @@ favbot()
 ## SET TIMER
 check_followers_timer = call_repeatedly(60, favbot) #seconds
 
+while True:
+	try:
+		#whatever
+	except KeyboardInterrupt:
+		stopped.set()
+		raise

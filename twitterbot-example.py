@@ -17,7 +17,7 @@ from threading import Event, Thread, Timer
 global twitter
 print 'twitter client requested' 
 twitter = Twython('XXXXXXX',  #API_KEY
-				  'XXXXXXX', #APP_SECRET,
+		  'XXXXXXX', #APP_SECRET,
                   'XXXXXXX', #OAUTH_TOKEN, 
                   'XXXXXXX')#OAUTH_TOKEN_SECRET
                   
@@ -66,11 +66,12 @@ def call_repeatedly(interval, func, *args): ## you can pass arguments too which 
 stopped = None
 ## just checking....
 print " HELLO I AM WORKING"
-## Run the porcess once immediately when we launch
+## Run the process once immediately when we launch
 favbot()
 
-## SET TIMER
-check_followers_timer = call_repeatedly(60, favbot) #seconds
+## SET TIMERs
+fav_timer = call_repeatedly(60, favbot) #seconds
+retweet_timer = call_repeatedly(40, retweetbot) #seconds
 
 while True:
 	try:
